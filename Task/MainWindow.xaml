@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cars" Height="450" Width="800"
+        Closing="Window_Closing">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="showCars" Margin="0,0,181,0" />
+        <Button Content="Запросить по номеру" HorizontalAlignment="Right" Margin="0,79,20,0" VerticalAlignment="Top" Click="Button_Click_Request_Id"/>
+        <Button Content="Запросить всё" HorizontalAlignment="Right" Margin="0,217,39,0" VerticalAlignment="Top" Click="Button_Click_Request_All"/>
+        <Button x:Name="btnSave" Content="Сохранить" HorizontalAlignment="Right" Margin="0,291,49,0" VerticalAlignment="Top" Click="BtnSave_Click"/>
+        <TextBox x:Name="inputId" HorizontalAlignment="Right" Margin="0,152,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
